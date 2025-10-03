@@ -1,4 +1,4 @@
-qimport random
+import random
 
 questions = [
     {
@@ -40,6 +40,46 @@ questions = [
         "fråga": "Hur skriver man en loop som kör så länge x är mindre än 10?",
         "alternativ": ["A: while x < 10:", "B: for x < 10:", "C: until x == 10:", "D: repeat x < 10:"],
         "rätt": "A"
+    },
+    {
+        "fråga": "Vilken operator används för att jämföra om två värden är lika?",
+        "alternativ": ["A: =", "B: !=", "C: ==", "D: <>"],
+        "rätt": "C"
+    },
+    {
+        "fråga": "Hur kan du konvertera ett tal till en sträng i Python?",
+        "alternativ": ["A: str()", "B: int()", "C: float()", "D: bool()"],
+        "rätt": "A"
+    },
+    {
+        "fråga": "Vad ger uttrycket 5 // 2 i Python?",
+        "alternativ": ["A: 2.5", "B: 2", "C: 3", "D: 1"],
+        "rätt": "B"
+    },
+    {
+        "fråga": "Vilken funktion används för att räkna längden på en sträng?",
+        "alternativ": ["A: length()", "B: count()", "C: size()", "D: len()"],
+        "rätt": "D"
+    },
+    {
+        "fråga": "Hur kan du skriva en if-else-sats i Python?",
+        "alternativ": ["A: if x: else:", "B: if x then else:", "C: if x: ... else: ...", "D: if x else:"],
+        "rätt": "C"
+    },
+    {
+        "fråga": "Vad är resultatet av uttrycket True and False?",
+        "alternativ": ["A: True", "B: False", "C: 1", "D: 0"],
+        "rätt": "B"
+    },
+    {
+        "fråga": "Vilken datatyp får resultatet av input() om inget konverteras?",
+        "alternativ": ["A: int", "B: str", "C: float", "D: bool"],
+        "rätt": "B"
+    },
+    {
+        "fråga": "Hur kan man avbryta en while-loop i Python?",
+        "alternativ": ["A: continue", "B: return", "C: break", "D: stop"],
+        "rätt": "C"
     }
 ]
 
@@ -47,7 +87,6 @@ while True:
     print("Välkommen till Python-quiz från kapitel 2, 3 och 4!\n")
     poäng = 0
 
-    # Skapa en slumpad lista av frågorna
     slumpade_frågor = random.sample(questions, len(questions))
 
     for i, q in enumerate(slumpade_frågor, 1):
