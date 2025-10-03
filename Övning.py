@@ -1,3 +1,5 @@
+qimport random
+
 questions = [
     {
         "fråga": "Vad används för att ge variabler ett värde i Python?",
@@ -45,7 +47,10 @@ while True:
     print("Välkommen till Python-quiz från kapitel 2, 3 och 4!\n")
     poäng = 0
 
-    for i, q in enumerate(questions, 1):
+    # Skapa en slumpad lista av frågorna
+    slumpade_frågor = random.sample(questions, len(questions))
+
+    for i, q in enumerate(slumpade_frågor, 1):
         print(f"Fråga {i}: {q['fråga']}")
         for alt in q["alternativ"]:
             print(alt)
